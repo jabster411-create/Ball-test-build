@@ -12,7 +12,7 @@ ball_rect = ball.get_rect()
 clock = pygame.time.Clock()
 running = True
 while running:
-    # Handle window events separately from the animation.
+    # the window and the ball
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
@@ -21,7 +21,7 @@ while running:
         
     ball_rect = ball_rect.move(speed)
 
-        # Keep the ball inside the window and send it back from each edge.
+        # this keeps the ball going off the edge
     if ball_rect.left < 0:
          ball_rect. left = 0
          speed[0] = abs(speed[0])
